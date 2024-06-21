@@ -7,8 +7,15 @@ from pymongo.errors import DuplicateKeyError
 from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
 from marshmallow.exceptions import ValidationError
-from info import DATABASE_URL, DATABASE_NAME, COLLECTION_NAME, MAX_BTN
+from info import DATABASE_URL, DATABASE_NAME, COLLECTION_NAME, MAX_BTN, FILE_UPDATE_CHANNEL
+from Script import script
 
+def clean_file_name(file_name):
+    file_name = re.sub(r"\[.*?\]|\{.*?\}|\(.*?\)", "", file_name)
+    file_name = file_name.replace("_", " ")
+    file_name = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file_name.split()))
+    return file_name
+    
 client = AsyncIOMotorClient(DATABASE_URL)
 db = client[DATABASE_NAME]
 instance = Instance.from_db(db)
