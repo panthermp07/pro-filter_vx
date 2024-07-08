@@ -12,12 +12,12 @@ class script(object):
 ★ Username: @Rk_botowner
 ★ Update Channel : @Rkbotz"""
 
-    STATUS_TXT = """🗂 Total Files: <code>{}</code>
+    STATUS_TXT = """```🗂 Total Files: <code>{}</code>
 👤 Total Users: <code>{}</code>
 👥 Total Chats: <code>{}</code>
 ✨ Used Storage: <code>{}</code>
 🗳 Free Storage: <code>{}</code>
-🚀 Bot Uptime: <code>{}</code>"""
+🚀 Bot Uptime: <code>{}</code>```"""
 
     NEW_GROUP_TXT = """#NewGroup
 Title - {}
