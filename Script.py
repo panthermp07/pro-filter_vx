@@ -12,12 +12,13 @@ class script(object):
 ★ Username: @infinity_botzz
 ★ 𝙲𝚘𝚗𝚝𝚊𝚌𝚝: @mpbotzsupport_bot"""
 
-    STATUS_TXT = """🗂 Total Files: <code>{}</code>
+    STATUS_TXT = """```
+    🗂 Total Files: <code>{}</code>
 👤 Total Users: <code>{}</code>
 👥 Total Chats: <code>{}</code>
 ✨ Used Storage: <code>{}</code>
 🗳 Free Storage: <code>{}</code>
-🚀 Bot Uptime: <code>{}</code>"""
+🚀 Bot Uptime: <code>{}</code>```"""
 
     NEW_GROUP_TXT = """#NewGroup
 Title - {}
